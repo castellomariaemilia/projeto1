@@ -7,14 +7,15 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
 		<title>EMIT Financial Upstream Documentation Hub</title>
 		<link href="unity-1.6.0/css/em-unity-1.6.0.min.css" media="all" rel="stylesheet" />
-		<script type="text/javascript" src="unity-1.6.0/js/vendor/svg4everybody.min.js"></script><!-- polyfill for SVG icons -->
+		<link href="style.css" rel="stylesheet" />
+    <script type="text/javascript" src="unity-1.6.0/js/vendor/svg4everybody.min.js"></script><!-- polyfill for SVG icons -->
 
 	</head>
 	<body>
 
 <main>  
 <header class="em-c-header em-c-header--large em-u-margin-bottom-none" role="banner">
-  <div class="em-l-container em-c-header__inner">
+  <div class="em-l-container em-c-header__inner corMenu">
     <div class="em-c-header__body">
       <div class="em-c-header__title-container">
         <h2 class="em-c-header__title"><a href="#" rel="home" class="em-c-header__title-link">EMIT Financial Upstream Documentation Hub</a></h2>
@@ -64,27 +65,6 @@
   <!-- end em-l-container -->
 </header>
 <main role="main">
-  <div class="em-c-band em-c-band--blue-deep">
-    <div class="em-l-container">
-      <form method="post" action="#" role="search" class="em-c-search-form em-c-search__label--large">
-        <label for="search" class="em-c-search__label em-c-search__label--large">Search</label>
-        <div class="em-c-search__body">
-          <input type="search" id="search" class="em-c-search__input" placeholder="Search" value="Search keyword" />
-          <button class="em-c-btn em-c-btn--primary" aria-label="Search">
-            <div class="em-c-btn__inner">
-              <svg class="em-c-icon em-c-icon--small em-c-btn__icon " data-em-icon-path="../../images/em-icons.svg">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../images/em-icons.svg#search"></use>
-              </svg>
-            </div>
-          </button>
-          <!-- end em-c-btn -->
-        </div>
-      </form>
-      <!-- end em-c-search -->
-    </div>
-    <!--end em-l-container-->
-  </div>
-  <!--end em-c-band-->
   <div class="em-l-container">
     <div class="em-c-page-header em-c-page-header--small">
       <h1 class="em-c-page-header__title">432 search results </h1>
@@ -103,7 +83,7 @@
           </button>
           <!-- end em-c-btn -->
           <div class="em-c-collapsible-toolbar__panel em-js-toolbar-panel">
-            <div class="em-c-toolbar ">
+            <div class="em-c-toolbar">
               <div class="em-c-toolbar__item ">
                 <div class="em-c-dropdown-check em-js-dropdown-check">
                   <button class="em-c-btn em-c-btn--small em-c-btn--is-dropdown em-js-dropdown-trigger">
@@ -193,58 +173,31 @@
                 </div>
                 <!-- End em-c-dropdown-check -->
               </div>
-              <!-- end em-c-toolbar__item -->
+
+
+
               <div class="em-c-toolbar__item ">
-                <div class="em-c-dropdown-check em-js-dropdown-check">
-                  <button class="em-c-btn em-c-btn--small em-c-btn--is-dropdown em-js-dropdown-trigger">
-                    <div class="em-c-btn__inner">
-                      <span class="em-c-btn__text">Tier</span>
-                      <svg class="em-c-icon em-c-icon--small em-c-btn__icon em-c-btn__icon-only">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../images/em-icons.svg#caret-down"></use>
-                      </svg>
-                    </div>
-                  </button>
-                  <!-- end em-c-btn -->
-                  <div class="em-c-dropdown-check__panel">
-                    <ul class="em-c-dropdown-check__list">
-                      <li class="em-c-dropdown-check__item">
-                        <label class="em-c-input-group em-c-checkbox--container " for="option-7">
-                          <input id="option-7" type="checkbox" name="" value="" class="em-c-input-group__control" checked>
-                          <span class="em-c-checkbox--checkmark"></span>
-                          <span class="em-c-input-group__text">Tier 1</span>
-                        </label>
-                        <!-- end em-c-input-group -->
-                      </li>
-                      <li class="em-c-dropdown-check__item">
-                        <label class="em-c-input-group em-c-checkbox--container " for="option-8">
-                          <input id="option-8" type="checkbox" name="" value="" class="em-c-input-group__control" checked>
-                          <span class="em-c-checkbox--checkmark"></span>
-                          <span class="em-c-input-group__text">Tier 2</span>
-                        </label>
-                        <!-- end em-c-input-group -->
-                      </li>
-                      <li class="em-c-dropdown-check__item">
-                        <label class="em-c-input-group em-c-checkbox--container " for="option-9">
-                          <input id="option-9" type="checkbox" name="" value="" class="em-c-input-group__control" checked>
-                          <span class="em-c-checkbox--checkmark"></span>
-                          <span class="em-c-input-group__text">Tier 3</span>
-                        </label>
-                        <!-- end em-c-input-group -->
-                      </li>
-                      <li class="em-c-dropdown-check__item">
-                        <label class="em-c-input-group em-c-checkbox--container " for="option-10">
-                          <input id="option-10" type="checkbox" name="" value="" class="em-c-input-group__control" checked>
-                          <span class="em-c-checkbox--checkmark"></span>
-                          <span class="em-c-input-group__text">Tier 4</span>
-                        </label>
-                        <!-- end em-c-input-group -->
-                      </li>
-                    </ul>
+                <form method="post" action="#" role="search" class="em-c-search-form em-js-header-search">
+                  <label for="search" class="em-c-search__label em-u-is-vishidden">Search</label>
+                  <div class="em-c-search__body">
+                    <input type="search" id="search" class="em-c-search__input" placeholder="Search" value="" />
+                    <button class="em-c-btn em-c-btn--primary" aria-label="Search">
+                      <div class="em-c-btn__inner">
+                        <svg class="em-c-icon em-c-icon--small em-c-btn__icon " data-em-icon-path="../../images/em-icons.svg">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../images/em-icons.svg#search"></use>
+                        </svg>
+                      </div>
+                    </button>
+                    <!-- end em-c-btn -->
                   </div>
-                  <!-- End em-c-dropdown-check__panel -->
-                </div>
-                <!-- End em-c-dropdown-check -->
+                </form>
+                <!-- end em-c-search -->
               </div>
+
+
+
+
+              <!-- end em-c-toolbar__item -->
               <!-- end em-c-toolbar__item -->
               <div class="em-c-toolbar__item em-is-aligned-right">
                 <form class="em-c-field em-c-field--inline em-c-field--small" action="#" method="post">
@@ -283,7 +236,7 @@
         <div class="em-c-table-object__body-inner">
           <table class="em-c-table ">
             <thead class="em-c-table__header">
-              <tr class="em-c-table__header-row">
+              <tr class="em-c-table__header-row corBarra">
                 <th scope="col" class="em-c-table__header-cell ">FI Doc Type</th>
                 <th scope="col" class="em-c-table__header-cell ">FI Instance, Tool, Technology</th>
                 <th scope="col" class="em-c-table__header-cell ">FI Team, Process, Script Group</th>
