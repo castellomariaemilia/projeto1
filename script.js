@@ -13,7 +13,13 @@ $(document).ready(function () {
             console.log(docs)
             var html = '';
             for (let i = 0; i < docs.length; i++) {
-                html += '<h2>' + docs[i].FileLeafRef + '</h2>'
+                html += '<tr class="em-c-table__row ">'
+                html += '<td class="em-c-table__cell " colspan="">' + docs[i].FileLeafRef + '<a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="unity-1.6.0/images/24/em-icons.svg#download" href="' + docs[i].ServerRedirectedEmbedUrl + '"> d </a>' + '</td>'
+                html += '<td class="em-c-table__cell " colspan="">' + docs[i].FI_x0020_Doc_x0020_Type + '</td>'
+                html += '<td class="em-c-table__cell " colspan="">' + docs[i].FI_x0020_Instance_x002C__x0020_Tool_x002C__x0020_Technology + '</td>'
+                html += '<td class="em-c-table__cell " colspan="">' + docs[i].FI_x0020_Team_x002C__x0020_Process_x002C__x0020_Script_x0020_Group + '</td>'
+                html += '<td class="em-c-table__cell " colspan="">' + docs[i].Editor[0].title + '</td>'
+                html+= '</tr>'
             }
             $(".docs").html(html);
             console.log(html);
