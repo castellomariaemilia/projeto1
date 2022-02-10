@@ -25,7 +25,7 @@ $(document).ready(function () {
             for (let i = 0; i < filter.length; i++) {               
                 htmlFilter1 += '<li class="em-c-dropdown-check__item">'
                 htmlFilter1 += '<label class="em-c-input-group em-c-checkbox--container " for="option-' + cont +'">'
-                htmlFilter1 += '<input id="option-' + cont +'" type="checkbox" name="' + filter[i] + '" value="' + filter[i] + '" class="em-c-input-group__control">'
+                htmlFilter1 += '<input id="option-' + cont +'" type="checkbox" name="checkbox1" value="' + filter[i] + '" class="em-c-input-group__control">'
                 htmlFilter1 +=  '<span class="em-c-checkbox--checkmark"></span>'
                 htmlFilter1 +=  '<span class="em-c-input-group__text">' + filter[i] + '</span>'
                 htmlFilter1 += '</label>'
@@ -37,7 +37,7 @@ $(document).ready(function () {
             for (let i = 0; i < filter2.length; i++) {               
                 htmlFilter2 += '<li class="em-c-dropdown-check__item">'
                 htmlFilter2 += '<label class="em-c-input-group em-c-checkbox--container " for="option-' + cont +'">'
-                htmlFilter2 += '<input id="option-' + cont +'" type="checkbox" name="' + filter2[i] + '" value="' + filter2[i] + '" class="em-c-input-group__control">'
+                htmlFilter2 += '<input id="option-' + cont +'" type="checkbox" name="checkbox2" value="' + filter2[i] + '" class="em-c-input-group__control">'
                 htmlFilter2 +=  '<span class="em-c-checkbox--checkmark"></span>'
                 htmlFilter2 +=  '<span class="em-c-input-group__text">' + filter2[i] + '</span>'
                 htmlFilter2 += '</label>'
