@@ -1,26 +1,56 @@
-var url = "https://ishareteam3.na.xom.com/sites/SASADL/_layouts/15/inplview.aspx?List={0FBC7136-CA5E-4CE8-A604-DCA428469F57}&View={6D3E31BE-C096-4FA5-9F77-0D36062D04A4}&ViewCount=25&IsXslView=TRUE&IsCSR=TRUE&Paged=FALSE&GroupString=%3B%23Training%3B%23&IsGroupRender=TRUE&WebPartID={6D3E31BE-C096-4FA5-9F77-0D36062D04A4}";
+var array = [];
+var cont = 0;
+
+function getId(id){
+    for(let i=0; i<id.length; i++){
+        $.ajax({
+            async:false,
+            url: `https://ishareteam3.na.xom.com/sites/SASADL/_vti_bin/listdata.svc/SharedDocuments(${id[i]})/FIInstanceToolTechnology?$select=Value`,
+            type: "GET",
+            dataType: 'json',            
+            xhrFields: {
+                withCredentials: true
+            },
+            success:function(data) {
+                for(let j=0; j<data.d.results.length; j++){
+                    array[cont] = data.d.results[j].Value
+                    cont++;
+                }
+                
+            }
+        })
+    }
+    console.log(cont)
+    return array;
+}
+
+
+var url = "https://ishareteam3.na.xom.com/sites/SASADL/_vti_bin/listdata.svc/SharedDocuments?$filter=FIDocTypeValue%20eq%27Training%27";
 $(document).ready(function () {
     $.ajax({
+        async:false,
         url: url,
-        type: "POST",
+        type: "GET",
         dataType: 'json',
         xhrFields: {
             withCredentials: true
         },
         success: function (data) {           
-            docs = data.Row           
+            docs = data.d.results
+            console.log(docs)          
             var html = '';
             var htmlFilter1='';
             var htmlFilter2='';
-            auxfilter = data.Row.map(e=>e.FI_x0020_Instance_x002C__x0020_Tool_x002C__x0020_Technology)
-            auxfilter2 = data.Row.map(e=>e.FI_x0020_Team_x002C__x0020_Process_x002C__x0020_Script_x0020_Group)
+            var id = docs.map(e=>e.Id);
+            auxfilter = getId(id);
+            auxfilter2 = docs.map(e=>e.FITeamProcessScriptGroupValue)
             
-            for(let i = 1; i < auxfilter.length; i++){
-                auxfilter[0] = auxfilter[0].concat(auxfilter[i])
-            }
-            filter = [...new Set(auxfilter[0])]
+            
+            
+            filter = [...new Set(auxfilter)]
             filter2 = [...new Set(auxfilter2)]
-            
+            console.log(array)
+
             let cont = 1;
             for (let i = 0; i < filter.length; i++) {               
                 htmlFilter1 += '<li class="em-c-dropdown-check__item">'
